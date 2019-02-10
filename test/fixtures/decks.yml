@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+open_deck:
+  name: Open deck
+  access: opened
+  cards_count: 0
