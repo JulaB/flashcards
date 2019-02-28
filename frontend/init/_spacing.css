@@ -1,0 +1,18 @@
+:root {
+  --baseline: 24px;
+  --space-lg: calc(var(--baseline) * 2);
+  --space-md: var(--baseline);
+  --space-sm: calc(var(--baseline) / 2);
+}
+
+h1 {
+  margin-bottom: var(--space-lg);
+}
+
+h2 {
+  margin-bottom: var(--space-md);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}

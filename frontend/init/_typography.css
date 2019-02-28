@@ -1,0 +1,41 @@
+:root {
+  --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-secondary: var(--font-primary);
+  --text-base-size: 1em; /* ~16px */
+  --text-scale-ratio: 1.2;
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+}
+
+body {
+  font-size: var(--font-base-size);
+  font-family: var(--font-primary);
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: var(--font-secondary);
+  line-height: 1.5;
+}
+
+h1,
+.text-xxl {
+  font-size: var(--text-xxl);
+}
+
+h2,
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+h3,
+.text-md {
+  font-size: var(--text-md);
+}
+
+small,
+.text-sm {
+  font-size: var(--text-sm);
+}
