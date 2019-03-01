@@ -1,4 +1,15 @@
 #!/usr/bin/env ruby
+
+if ENV['RAILS_ENV'] == 'test' && ENV['COVERAGE']
+  require 'simplecov'
+  SimpleCov.start 'rails' do
+    add_filter '/bin/'
+    add_filter do |file|
+      file.lines.count < 7
+    end
+  end
+end
+
 begin
   load File.expand_path('../spring', __FILE__)
 rescue LoadError => e
