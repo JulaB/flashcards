@@ -1,16 +1,19 @@
 {
-  "extends": "eslint-config-airbnb-base",
+  "extends": ["eslint-config-airbnb-base", "plugin:react/recommended"],
   "env": {
     "browser": true,
     "es6": true
   },
   "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
   "settings": {
     "import/resolver": {
       "webpack": {
         "config": {
           "resolve": {
-            "modules": ["frontend", "node_modules"]
+            "modules": ["client", "node_modules"]
           }
         }
       }

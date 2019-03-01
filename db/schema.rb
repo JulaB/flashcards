@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_02_10_072606) do
 
   create_table "decks", force: :cascade do |t|
     t.string "name"
-    t.string "access", limit: 10
+    t.string "access", limit: 10, default: "opened"
     t.integer "cards_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

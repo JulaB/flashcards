@@ -1,0 +1,9 @@
+.app {
+  &__content {
+    margin: 0 auto;
+  }
+
+  &__motto {
+    text-align: center;
+  }
+}
