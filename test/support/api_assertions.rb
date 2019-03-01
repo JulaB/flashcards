@@ -6,6 +6,17 @@ module Api
   module Assertions
     def assert_successful(response)
       assert_response :success
+      assert_content_type(response)
+    end
+
+    def assert_not_found(response)
+      assert_response :not_found
+      assert_content_type(response)
+    end
+
+    private
+
+    def assert_content_type(response)
       assert_equal 'application/vnd.api+json', response.content_type
     end
   end
