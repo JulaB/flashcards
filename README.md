@@ -1,24 +1,35 @@
-# README
+# FlashCards app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a simple flashcards application.
 
-Things you may want to cover:
+## Technologies
+* Ruby 2.6.0
+* Rails 5.2.2
+* Postgres 11.1
+* React 16.8.3
+* Redux 4.0.1
+* Webpack 4.29.3
+* Node 10.15.0
+* PostCSS
+* Minitest
 
-* Ruby version
+## Project Status
+Work in progress.
 
-* System dependencies
+## Install
+* yarn install
+* bundle install
+* rails db:setup
+* rails test
 
-* Configuration
+## Development
+To run server in development with hot module replacement `overmind s -f Procfile.dev`
 
-* Database creation
+## Running the tests
+* rails test
 
-* Database initialization
+## Author
+[Julia Bazhukhina](https://github.com/JulaB)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+MIT
