@@ -3,6 +3,7 @@ module.exports = {
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
     require('postcss-nested'),
+    require('postcss-custom-media'),
     require('postcss-preset-env')({
       autoprefixer: {
         flexbox: 'no-2009'

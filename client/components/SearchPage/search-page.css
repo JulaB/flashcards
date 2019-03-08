@@ -1,0 +1,7 @@
+.search-page {
+  &__results {
+    display: grid;
+    grid-gap: var(--space-sm);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}

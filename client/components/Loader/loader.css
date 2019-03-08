@@ -1,0 +1,30 @@
+@keyframes dot-bounce {
+  0%,
+  100% { transform: scale(0); }
+  50% { transform: scale(1); }
+}
+
+.loader {
+  display: flex;
+  margin: 0 auto;
+  width: 66px;
+
+  &__dot1,
+  &__dot2,
+  &__dot3 {
+    width: 16px;
+    height: 16px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color: var(--color-loader);
+    animation: dot-bounce 1.4s ease-in-out infinite;
+  }
+
+  &__dot2 {
+    animation-delay: 0.16s;
+  }
+
+  &__dot3 {
+    animation-delay: 0.32s;
+  }
+}

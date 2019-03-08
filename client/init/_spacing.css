@@ -1,5 +1,5 @@
 :root {
-  --baseline: 24px;
+  --baseline: 30px;
   --space-lg: calc(var(--baseline) * 2);
   --space-md: var(--baseline);
   --space-sm: calc(var(--baseline) / 2);

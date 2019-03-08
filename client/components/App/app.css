@@ -1,6 +1,20 @@
 .app {
-  &__content {
+  &__container {
+    width: 100%;
     margin: 0 auto;
+    padding: 0 var(--space-sm);
+  }
+
+  @media (--viewport-lg) {
+    &__container {
+      max-width: 960px;
+    }
+  }
+
+  @media (--viewport-xl) {
+    &__container {
+      max-width: 1140px;
+    }
   }
 
   &__motto {
