@@ -17,7 +17,7 @@ export const searchFetchDataFailure = error => ({
 export const searchFetchData = () => (
   (dispatch) => {
     dispatch(searchIsFetching(true));
-    fetch('/api/v1/search')
+    return fetch('/api/v1/search')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Bad request');

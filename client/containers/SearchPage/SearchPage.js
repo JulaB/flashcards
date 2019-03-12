@@ -6,7 +6,7 @@ import Deck from 'components/Deck/Deck';
 import { searchFetchData as fetchData } from 'actions/searchActions';
 import './search-page.css';
 
-class SearchPage extends React.Component {
+export class SearchPage extends React.Component {
   componentDidMount() {
     this.props.fetchData();
   }
