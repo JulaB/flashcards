@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> renders the component 1`] = `
+<div
+  className="loader"
+>
+  <div
+    className="loader__dot1"
+  />
+  <div
+    className="loader__dot2"
+  />
+  <div
+    className="loader__dot3"
+  />
+</div>
+`;

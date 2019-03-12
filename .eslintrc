@@ -1,13 +1,26 @@
 {
-  "extends": ["eslint-config-airbnb-base", "plugin:react/recommended"],
+  "extends": [
+    "eslint-config-airbnb-base",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
   "env": {
     "browser": true,
+    "jest/globals": true,
     "es6": true
   },
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "jest"
   ],
+  "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
   "settings": {
     "import/resolver": {
       "webpack": {

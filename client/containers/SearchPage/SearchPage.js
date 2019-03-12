@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Loader from '../Loader/Loader';
-import Deck from '../Deck/Deck';
-import { searchFetchData as fetchData } from '../../actions/searchActions';
+import Loader from 'components/Loader/Loader';
+import Deck from 'components/Deck/Deck';
+import { searchFetchData as fetchData } from 'actions/searchActions';
 import './search-page.css';
 
 class SearchPage extends React.Component {

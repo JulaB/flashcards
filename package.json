@@ -3,7 +3,34 @@
   "license": "MIT",
   "author": "Julia Bazhukhina",
   "scripts": {
-    "lint-staged": "$(yarn bin)/lint-staged"
+    "lint-staged": "$(yarn bin)/lint-staged",
+    "test": "$(yarn bin)/jest"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/coverage/"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "client"
+    ],
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/client/__tests__/mocks/styleMock.js"
+    },
+    "roots": [
+      "<rootDir>/client/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/client/__tests__/setup/setupEnzyme.js"
+    ],
+    "testPathIgnorePatterns": [
+      "client/__tests__/setup/",
+      "client/__tests__/mocks/"
+    ]
   },
   "lint-staged": {
     "config/webpack/**/*.js": [
@@ -31,6 +58,7 @@
     "@rails/webpacker": "^4.0.0-rc.7",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "normalize.css": "^8.0.1",
+    "postcss-custom-media": "^7.0.7",
     "postcss-nested": "^4.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
@@ -41,14 +69,20 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.4.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.11.0",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.4.0",
     "lint-staged": "^8.1.3",
-    "postcss-custom-media": "^7.0.7",
     "pre-commit": "^1.2.2",
+    "redux-mock-store": "^1.5.3",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "webpack-dev-server": "^3.1.14"

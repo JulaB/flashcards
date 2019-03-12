@@ -1,4 +1,4 @@
-import * as types from '../constants/searchConstants';
+import * as types from 'constants/searchConstants';
 
 export const initialState = {
   decks: [],

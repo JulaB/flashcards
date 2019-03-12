@@ -12,6 +12,8 @@ This project is a simple flashcards application.
 * Node 10.15.0
 * PostCSS
 * Minitest
+* Jest
+* Enzyme
 
 ## Project Status
 Work in progress.
@@ -21,12 +23,14 @@ Work in progress.
 * bundle install
 * rails db:setup
 * rails test
+* yarn test
 
 ## Development
 To run server in development with hot module replacement `overmind s -f Procfile.dev`
 
 ## Running the tests
 * rails test
+* yarn test
 
 ## Author
 [Julia Bazhukhina](https://github.com/JulaB)

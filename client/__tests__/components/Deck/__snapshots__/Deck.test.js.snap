@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Deck /> renders the component 1`] = `
+<div
+  className="deck"
+>
+  <h4
+    className="deck__title"
+  >
+    test deck
+  </h4>
+</div>
+`;
