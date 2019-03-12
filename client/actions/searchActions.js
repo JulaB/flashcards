@@ -1,4 +1,5 @@
 import * as types from 'constants/searchConstants';
+import apiUrl from 'libs/routes';
 
 export const searchIsFetching = () => ({
   type: types.SEARCH_IS_FETCHING,
@@ -17,7 +18,7 @@ export const searchFetchDataFailure = error => ({
 export const searchFetchData = () => (
   (dispatch) => {
     dispatch(searchIsFetching(true));
-    return fetch('/api/v1/search')
+    return fetch(apiUrl('/search'))
       .then((response) => {
         if (!response.ok) {
           throw new Error('Bad request');

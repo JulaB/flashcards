@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import * as actions from 'actions/searchActions';
 import * as types from 'constants/searchConstants';
+import apiUrl from 'libs/routes';
 
 const middleware = [thunk];
 const mockStore = configureStore(middleware);
@@ -40,7 +41,7 @@ describe('searchActions', () => {
     });
 
     it('creates SEARCH_FETCH_DATA_FAILURE when response is invalid', () => {
-      fetchMock.getOnce('/api/v1/search', 500);
+      fetchMock.getOnce(apiUrl('/search'), 500);
       const expectedActions = [
         { type: types.SEARCH_IS_FETCHING },
         {
