@@ -5,6 +5,7 @@ require_relative '../config/environment'
 require 'rails/test_help'
 require 'minitest/rails'
 require 'json_expressions/minitest'
+require 'mocha/minitest'
 
 Dir[Rails.root.join('test/support/**/*.rb')].each { |f| require f }
 

@@ -14,6 +14,11 @@ module Api
       assert_content_type(response)
     end
 
+    def assert_server_error(response)
+      assert_response 500
+      assert_content_type(response)
+    end
+
     private
 
     def assert_content_type(response)

@@ -7,6 +7,20 @@ module Api
     it 'returns 404 when non existing page requested' do
       get '/api/v1/some_wrong_page'
       response.must_be_not_found
+      pattern = { message: 'Not Found' }
+      response.body.must_match_json_expression(pattern)
+    end
+
+    it 'returns 500 error when the server error happens' do
+      Api::V1::SearchController.any_instance.stubs(:index)
+                               .raises(::StandardError)
+
+      get '/api/v1/search'
+      response.must_be_server_error
+      pattern = { message: 'Internal Server Error' }
+      response.body.must_match_json_expression(pattern)
+
+      Api::V1::SearchController.any_instance.unstub(:index)
     end
   end
 end

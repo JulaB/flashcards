@@ -12,5 +12,8 @@ module Api
     ActionDispatch::TestResponse.infect_an_assertion(
       :assert_not_found, :must_be_not_found, :unary
     )
+    ActionDispatch::TestResponse.infect_an_assertion(
+      :assert_server_error, :must_be_server_error, :unary
+    )
   end
 end
