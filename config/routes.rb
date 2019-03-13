@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :search, only: :index
+      resources :decks, only: [] do
+        resources :cards, only: :index
+      end
     end
     match '*unmatched_route', to: 'api#not_found', via: :all
   end

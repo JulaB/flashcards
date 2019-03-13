@@ -1,11 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  deck: one
-  term: MyString
-  definition: MyText
+card_one:
+  deck: open_deck
+  term: term 1
+  definition: definition 1
 
-two:
-  deck: two
-  term: MyString
-  definition: MyText
+card_two:
+  deck: open_deck
+  term: term 2
+  definition: definition 2
+
+card_open2_one:
+  deck: open_deck2
+  term: term 1
+  definition: definition 1
+
+card_closed_one:
+  deck: closed_deck
+  term: term 1
+  definition: definition 1
