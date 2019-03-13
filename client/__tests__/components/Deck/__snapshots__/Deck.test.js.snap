@@ -9,5 +9,15 @@ exports[`<Deck /> renders the component 1`] = `
   >
     test deck
   </h4>
+  <div
+    className="deck__info"
+  >
+    <Pluralize
+      className=""
+      count={0}
+      plural="cards"
+      singular="card"
+    />
+  </div>
 </div>
 `;

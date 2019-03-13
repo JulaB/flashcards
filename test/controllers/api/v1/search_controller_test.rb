@@ -15,7 +15,8 @@ module Api
             id: String,
             type: 'decks',
             attributes: {
-              name: String
+              name: String,
+              'cards-count' => Integer
             }
           ].ignore_extra_values!
         }

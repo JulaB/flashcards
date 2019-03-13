@@ -10,4 +10,8 @@
     padding: var(--space-sm);
     color: var(--color-text-light);
   }
+
+  &__info {
+    padding: var(--space-sm);
+  }
 }
