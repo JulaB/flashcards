@@ -3,6 +3,7 @@
   --space-lg: calc(var(--baseline) * 2);
   --space-md: var(--baseline);
   --space-sm: calc(var(--baseline) / 2);
+  --border-radius: 5px;
 }
 
 h1 {

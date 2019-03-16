@@ -1,0 +1,27 @@
+.card {
+  width: 100%;
+  height: 200px;
+
+  &__term,
+  &__definition {
+    border: 1px solid var(--color-accent);
+    width: inherit;
+    height: inherit;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__term {
+    font-size: var(--text-xl);
+  }
+
+  &:focus,
+  &:hover {
+    .card__term,
+    .card__definition {
+      border: 1px solid var(--color-primary-dark);
+    }
+  }
+}

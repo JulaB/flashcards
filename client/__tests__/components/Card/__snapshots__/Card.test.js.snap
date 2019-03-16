@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> renders component 1`] = `
+<FlipBox
+  className="card"
+>
+  <div
+    className="card__term"
+  >
+    test
+  </div>
+  <div
+    className="card__definition"
+  >
+    some definition
+  </div>
+</FlipBox>
+`;

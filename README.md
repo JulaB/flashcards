@@ -1,6 +1,4 @@
-# FlashCards app
-
-[![Codeship Status for JulaB/flashcards](https://app.codeship.com/projects/fa7b7c50-276a-0137-85fa-4aa988ab8cae/status?branch=master)](https://app.codeship.com/projects/330594)
+# FlashCards app &nbsp;&nbsp;&nbsp;&nbsp;[![Codeship Status for JulaB/flashcards](https://app.codeship.com/projects/fa7b7c50-276a-0137-85fa-4aa988ab8cae/status?branch=master)](https://app.codeship.com/projects/330594)
 
 This project is a simple flashcards application.
 
