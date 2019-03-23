@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import './flip-box.css';
 
+let componentCounter = 0;
+
 class FlipBox extends React.Component {
   static cardStyle(type, rotationDeg, zIndex) {
     return {
@@ -19,9 +21,15 @@ class FlipBox extends React.Component {
     this.state = {
       isFlipped: false,
     };
+    this.setComponentId();
     this.handleClick = this.handleClick.bind(this);
     this.frontCardProps = this.frontCardProps.bind(this);
     this.backCardProps = this.backCardProps.bind(this);
+  }
+
+  setComponentId() {
+    componentCounter += 1;
+    this.cID = componentCounter;
   }
 
   handleClick(event) {
@@ -48,7 +56,7 @@ class FlipBox extends React.Component {
   renderChild(child, ind) {
     const propsMethod = ind ? this.backCardProps : this.frontCardProps;
     return (
-      <div {...propsMethod()} key={`flip-child-${ind}`} >
+      <div {...propsMethod()} key={`flip-child-${this.cID}-${ind}`} >
         {child}
       </div>
     );

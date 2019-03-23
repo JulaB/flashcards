@@ -5,7 +5,7 @@ module Api
     before_action :check_json_request
 
     unless Rails.env.development?
-      rescue_from Exception, with: :render_server_error
+      rescue_from StandardError, with: :render_server_error
       rescue_from ActiveRecord::RecordNotFound, with: :not_found
     end
 
