@@ -17,7 +17,7 @@ export class SearchPage extends React.Component {
       <section className='search-page'>
         {isFetching && <Loader />}
         <div className='search-page__results'>
-          {decks.map(deck => <Deck {...deck.attributes} key={deck.id} />)}
+          {decks.map(deck => <Deck {...deck.attributes} id={deck.id} key={deck.id} />)}
         </div>
       </section>
     );

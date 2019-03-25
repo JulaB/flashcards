@@ -12,6 +12,9 @@ exports[`<Deck /> renders the component 1`] = `
   <div
     className="deck__info"
   >
+    <Connect(DeckCards)
+      deckId="0"
+    />
     <Pluralize
       className=""
       count={0}

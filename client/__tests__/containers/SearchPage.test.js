@@ -14,8 +14,8 @@ describe('<SearchPage />', () => {
 
   it('renders the component with decks', () => {
     const decks = [
-      { id: 1, attributes: { name: 'deck1' } },
-      { id: 2, attributes: { name: 'deck2' } },
+      { id: '1', attributes: { name: 'deck1' } },
+      { id: '2', attributes: { name: 'deck2' } },
     ];
     const wrapper = shallow(<SearchPage decks={decks} />);
     expect(wrapper.find(Loader)).toHaveLength(0);

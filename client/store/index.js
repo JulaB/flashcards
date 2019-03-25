@@ -4,10 +4,20 @@ import reducer from 'reducers';
 
 
 const configureStore = (initialState = {}) => {
-  const composedStore = compose(
-    applyMiddleware(thunk),
-  )(createStore);
-  return composedStore(reducer, initialState);
+  const middlewareEnhancer = applyMiddleware(thunk);
+  const enhancers = [middlewareEnhancer];
+  let composeEnhancers;
+
+  /* eslint-disable no-underscore-dangle */
+  if (process.env.NODE_ENV === 'development') {
+    composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  } else {
+    composeEnhancers = compose;
+  }
+  /* eslint-enable */
+
+  const composedEnhancers = composeEnhancers(...enhancers);
+  return createStore(reducer, initialState, composedEnhancers);
 };
 
 export default configureStore;
