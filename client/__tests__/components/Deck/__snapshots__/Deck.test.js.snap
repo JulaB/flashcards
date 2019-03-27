@@ -12,15 +12,18 @@ exports[`<Deck /> renders the component 1`] = `
   <div
     className="deck__info"
   >
-    <Connect(DeckCards)
-      deckId="0"
-    />
     <Pluralize
       className=""
       count={0}
       plural="cards"
       singular="card"
     />
+    <Button
+      className="btn--primary deck__button"
+      type="button"
+    >
+      Quick View
+    </Button>
   </div>
 </div>
 `;

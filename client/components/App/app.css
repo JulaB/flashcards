@@ -1,7 +1,7 @@
 .app {
   &__container {
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 0 var(--space-sm);
   }
 
@@ -19,5 +19,6 @@
 
   &__motto {
     text-align: center;
+    color: var(--color-accent-dark);
   }
 }

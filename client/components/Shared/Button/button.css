@@ -1,0 +1,29 @@
+:root {
+  --btn-font-size: 1em;
+  --btn-radius: 9999px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: var(--btn-font-size);
+  line-height: 1;
+  border: 0;
+  border-radius: var(--btn-radius);
+  color: var(--btn-default-text);
+  padding: 10px 15px;
+  outline: none;
+  background: var(--btn-default-bg);
+  cursor: pointer;
+
+  &--primary {
+    background: var(--btn-primary-bg);
+    border: 0;
+    color: var(--btn-primary-text);
+  }
+
+  &--primary:hover,
+  &--primary:focus {
+    background: var(--btn-primary-hover-bg);
+    color: var(--btn-primary-hover-text);
+  }
+}

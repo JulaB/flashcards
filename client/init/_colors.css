@@ -1,24 +1,21 @@
 :root {
-  --color-primary: #5e5db3;
-  --color-primary-dark: #22265f;
-  --color-accent: #8484a7;
-  --color-accent-dark: #857ba2;
-  --black: rgb(22, 24, 56);
-  --grey-1: rgb(174, 182, 158);
-  --grey-2: #555;
-  --grey-3: rgba(200, 200, 200);
-  --grey-4: #ddd;
-  --white: #ebede7;
+  --color-primary: #265569;
+  --color-primary-dark: #436b7d;
+  --color-accent: #81b3aa;
+  --color-accent-dark: #546d8f;
+  --black: #13161d;
+  --grey-1: #999;
+  --white: #ebefed;
 
   /* feedback */
-  --color-success: #51966e;
+  --color-success: #449e65;
   --color-error: #f44336;
-  --color-warning: #cf8636;
+  --color-warning: #c28e2d;
 
   /* typography */
   --color-text: var(--black);
   --color-text-light: var(--white);
-  --color-text-heading: var(--color-primary-dark);
+  --color-text-heading: var(--color-primary);
   --color-link: var(--color-primary);
   --color-link-visited: var(--color-primary-dark);
 
@@ -27,14 +24,16 @@
 
   /* buttons */
   --btn-primary-bg: var(--color-primary);
-  --btn-primary-hover: var(--color-primary-dark);
-  --btn-primary-label: var(--white);
+  --btn-primary-text: var(--white);
+  --btn-primary-hover-bg: var(--color-accent);
+  --btn-primary-hover-text: var(--white);
+  --btn-default-bg: var(--grey-1);
+  --btn-default-text: var(--white);
 
   /* others */
   --color-body: var(--white);
   --color-border: var(--color-accent);
   --color-loader: var(--color-accent-dark);
-  --color-card-bg: var(--color-accent);
 }
 
 body {
