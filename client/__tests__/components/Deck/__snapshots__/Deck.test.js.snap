@@ -18,12 +18,6 @@ exports[`<Deck /> renders the component 1`] = `
       plural="cards"
       singular="card"
     />
-    <Button
-      className="btn--primary deck__button"
-      type="button"
-    >
-      Quick View
-    </Button>
   </div>
 </div>
 `;

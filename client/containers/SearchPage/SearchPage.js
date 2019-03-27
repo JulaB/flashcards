@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Loader from 'components/Loader/Loader';
 import Deck from 'components/Deck/Deck';
+import DeckQuickView from 'containers/DeckQuickView/DeckQuickView';
 import { searchFetchData as fetchData } from 'actions/searchActions';
 import './search-page.css';
 
@@ -17,7 +18,11 @@ export class SearchPage extends React.Component {
       <section className='search-page'>
         {isFetching && <Loader />}
         <div className='search-page__results'>
-          {decks.map(deck => <Deck {...deck.attributes} id={deck.id} key={deck.id} />)}
+          {decks.map(deck => (
+            <Deck {...deck.attributes} key={deck.id}>
+              <DeckQuickView deckId={deck.id} />
+            </Deck>
+          ))}
         </div>
       </section>
     );

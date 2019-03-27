@@ -2,7 +2,7 @@
 
 exports[`<Loader /> renders the component 1`] = `
 <div
-  className="loader"
+  className="loader "
 >
   <div
     className="loader__dot1"

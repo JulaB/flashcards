@@ -27,4 +27,16 @@
   &__dot3 {
     animation-delay: 0.32s;
   }
+
+  &--btn {
+    width: auto;
+
+    .loader__dot1,
+    .loader__dot2,
+    .loader__dot3 {
+      width: calc(var(--text-base-size) - 6px);
+      height: calc(var(--text-base-size) - 6px);
+      background-color: var(--btn-primary-text);
+    }
+  }
 }
