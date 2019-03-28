@@ -28,4 +28,10 @@
     background: var(--btn-primary-hover-bg);
     color: var(--btn-primary-hover-text);
   }
+
+  &--primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
