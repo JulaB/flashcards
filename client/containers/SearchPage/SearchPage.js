@@ -20,7 +20,7 @@ export class SearchPage extends React.Component {
         <div className='search-page__results'>
           {decks.map(deck => (
             <Deck {...deck.attributes} key={deck.id}>
-              <DeckQuickView deckId={deck.id} />
+              <DeckQuickView {...deck.attributes} deckId={deck.id} />
             </Deck>
           ))}
         </div>

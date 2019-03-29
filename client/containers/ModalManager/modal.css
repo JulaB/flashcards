@@ -1,3 +1,64 @@
 .modal {
   background: var(--color-body);
+  position: absolute;
+  left: var(--space-sm);
+  right: var(--space-sm);
+  top: var(--space-sm);
+  bottom: var(--space-sm);
+  border-radius: var(--border-radius);
+  outline: none;
+  padding: var(--space-sm);
+  overflow: auto;
+
+  @media (--viewport-md) {
+    padding: var(--space-sm) var(--space-md) var(--space-md) var(--space-md);
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    max-width: 750px;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-sm);
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__close-btn {
+    margin-left: var(--space-sm);
+    display: inline-block;
+    font-size: var(--text-xl);
+  }
+}
+
+.ReactModal__Overlay,
+.ReactModal__Content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &--after-open {
+    opacity: 1;
+  }
+
+  &--before-close {
+    opacity: 0;
+  }
 }

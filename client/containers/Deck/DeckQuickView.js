@@ -40,12 +40,14 @@ export class DeckQuickViewContainer extends React.Component {
 
 DeckQuickViewContainer.propTypes = {
   deckId: PropTypes.string.isRequired,
+  name: PropTypes.string,
   isFetching: PropTypes.bool,
   openModalFor: PropTypes.func,
 };
 
 DeckQuickViewContainer.defaultProps = {
   isFetching: false,
+  name: '',
   openModalFor: () => {},
 };
 
@@ -53,13 +55,17 @@ const mapStateToProps = ({ deckReducer: state }, ownProps) => ({
   isFetching: state.deckIsFetching[ownProps.deckId] || false,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
   openModalFor: deckId => (
     dispatch(fetchData(deckId))
       .then(() => dispatch(
         showModal({
           modalType: DECK_MODAL,
-          modalProps: { deckId, open: true },
+          modalProps: {
+            deckId,
+            open: true,
+            title: ownProps.name,
+          },
         }),
       ))
   ),

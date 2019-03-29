@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
 import DeckModal from 'containers/Deck/DeckModal';
+import Button from 'components/Shared/Button/Button';
 import * as types from 'constants/modalConstants';
 
 import './modal.css';
@@ -46,7 +47,21 @@ class ModalManagerContainer extends React.Component {
         <ReactModal
           isOpen={this.state.isOpen}
           onRequestClose={this.closeModal}
+          className="modal"
+          overlayClassName="modal__overlay"
+          closeTimeoutMS={1000}
+          contentLabel={modalProps.title}
         >
+          <header className="modal__header">
+            <h3 className="modal__title">{modalProps.title}</h3>
+            <Button
+              className="btn--control modal__close-btn"
+              onClick={this.closeModal}
+              aria-label="Close"
+            >
+              &times;
+            </Button>
+          </header>
           <Component {...modalProps} />
         </ReactModal>
       </div>
@@ -63,6 +78,7 @@ ModalManagerContainer.defaultProps = {
   modalType: null,
   modalProps: {
     open: false,
+    title: '',
   },
 };
 

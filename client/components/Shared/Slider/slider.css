@@ -1,6 +1,7 @@
 .slider {
   display: flex;
   align-items: center;
+  flex-direction: column;
 
   &__window {
     width: 100%;
@@ -20,24 +21,13 @@
     flex: 0 0 100%;
   }
 
-  &__control-left,
-  &__control-right {
-    background: transparent;
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    outline: none;
-    color: var(--btn-primary-bg);
-    border-radius: var(--border-radius);
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  &__control-left:focus,
-  &__control-left:hover,
-  &__control-right:focus,
-  &__control-right:hover {
-    background: var(--btn-primary-hover);
-    color: var(--white);
+  &__info {
+    padding: 0 var(--space-sm);
   }
 }

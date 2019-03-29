@@ -6,7 +6,7 @@
   position: relative;
   outline: none;
   box-shadow: none;
-  perspective: 1000px;
+  perspective: 1500px;
   transform-style: preserve-3d;
   width: inherit;
   height: inherit;

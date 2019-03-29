@@ -1,6 +1,6 @@
 .card {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
 
   &__term,
   &__definition {
