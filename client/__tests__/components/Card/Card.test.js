@@ -9,4 +9,10 @@ describe('<Card />', () => {
     const wrapper = shallow(<Card term="test" definition="some definition" />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
+
+  it('renders component with default props', () => {
+    const wrapper = shallow(<Card />);
+    expect(wrapper.exists()).toBe(true);
+    expect(wrapper.html()).toBeNull();
+  });
 });

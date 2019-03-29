@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardsSlider /> renders slider with cards 1`] = `
+<Slider>
+  <Card
+    definition="some definition"
+    key="1"
+    term="term1"
+  />
+  <Card
+    definition="some definition"
+    key="2"
+    term="term2"
+  />
+</Slider>
+`;
