@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Shared/Button/Button';
+import * as keyCodes from 'constants/keyCodesConstants';
 import './slider.css';
 
 let componentCounter = 0;
@@ -8,13 +9,33 @@ let componentCounter = 0;
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      active: 0,
-    };
     this.slidesCount = React.Children.count(this.props.children);
+
+    this.state = {
+      active: this.normalizeSlideIndex(this.props.defaultActive),
+    };
+
     this.setComponentId();
     this.slideLeft = this.slideLeft.bind(this);
     this.slideRight = this.slideRight.bind(this);
+    this.handleKeydown = this.handleKeydown.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps !== this.props) {
+      this.slidesCount = React.Children.count(nextProps.children);
+      this.setState({
+        active: this.normalizeSlideIndex(nextProps.defaultActive),
+      });
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeydown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeydown);
   }
 
   get containerStyle() {
@@ -27,23 +48,35 @@ class Slider extends React.Component {
     this.cID = componentCounter;
   }
 
-  slideLeft(event) {
-    event.preventDefault();
+  handleKeydown(event) {
+    if (event.keyCode === keyCodes.ARROW_LEFT) {
+      this.slideLeft(event);
+    } else if (event.keyCode === keyCodes.ARROW_RIGHT) {
+      this.slideRight(event);
+    }
+  }
+
+  slideLeft() {
     if (this.isFirstSlide()) {
       return;
     }
-    let active = (this.state.active - 1) % this.slidesCount;
-    active = (active + this.slidesCount) % this.slidesCount;
+    const active = this.normalizeSlideIndex(this.state.active - 1);
     this.setState({ active });
   }
 
-  slideRight(event) {
-    event.preventDefault();
+  slideRight() {
     if (this.isLastSlide()) {
       return;
     }
-    const active = (this.state.active + 1) % this.slidesCount;
+    const active = this.normalizeSlideIndex(this.state.active + 1);
     this.setState({ active });
+  }
+
+  normalizeSlideIndex(ind = 0) {
+    if (!this.slidesCount) {
+      return 0;
+    }
+    return (ind + this.slidesCount) % this.slidesCount;
   }
 
   isFirstSlide() {
@@ -55,13 +88,16 @@ class Slider extends React.Component {
   }
 
   renderSlide(slide, ind) {
-    const activeClass = this.state.active === ind ? 'slider__slide--active' : '';
+    const active = this.state.active === ind;
+    const activeClass = active ? 'slider__slide--active' : '';
+
     return (
       <div
         className={`slider__slide ${activeClass}`}
         key={`slide-${this.cID}-${ind}`}
+        area-hidden={`${!active}`}
       >
-        {slide}
+        {React.cloneElement(slide, { focusable: active })}
       </div>
     );
   }
@@ -108,10 +144,12 @@ class Slider extends React.Component {
 }
 
 Slider.propTypes = {
+  defaultActive: PropTypes.number,
   children: PropTypes.node,
 };
 
 Slider.defaultProps = {
+  defaultActive: 0,
   children: null,
 };
 

@@ -4,12 +4,12 @@ import FlipBox from 'components/Shared/FlipBox/FlipBox';
 
 import './card.css';
 
-const Card = ({ term, definition }) => {
+const Card = ({ term, definition, ...props }) => {
   if (!term) {
     return null;
   }
   return (
-    <FlipBox className="card">
+    <FlipBox className="card" {...props}>
       <div className="card__term">{term}</div>
       <div className="card__definition" >{definition}</div>
     </FlipBox>

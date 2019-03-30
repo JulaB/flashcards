@@ -67,13 +67,14 @@ class FlipBox extends React.Component {
     if (!children.length) {
       return null;
     }
-    const { className } = this.props;
+    const { className, focusable } = this.props;
 
     return (
       <button
         className={`flip-box ${className}`}
         type="button"
         onClick={this.handleClick}
+        tabIndex={focusable ? 0 : -1}
       >
         {children.map((child, ind) => this.renderChild(child, ind))}
       </button>
@@ -84,10 +85,12 @@ class FlipBox extends React.Component {
 FlipBox.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  focusable: PropTypes.bool,
 };
 FlipBox.defaultProps = {
   className: '',
   children: null,
+  focusable: true,
 };
 
 export default FlipBox;

@@ -86,4 +86,26 @@ describe('<FlipBox />', () => {
     expect(wrapper.find('.flip-box__card-back').props().style.transform)
       .toBe('rotateY(-180deg)');
   });
+
+  describe('focusable', () => {
+    it('is focusable by default', () => {
+      const wrapper = mount(
+        <FlipBox>
+          <div>Front</div>
+        </FlipBox>,
+      );
+
+      expect(wrapper.find('.flip-box').props().tabIndex).toBe(0);
+    });
+
+    it('removes focus from the component', () => {
+      const wrapper = mount(
+        <FlipBox focusable={false}>
+          <div>Front</div>
+        </FlipBox>,
+      );
+
+      expect(wrapper.find('.flip-box').props().tabIndex).toBe(-1);
+    });
+  });
 });

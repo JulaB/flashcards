@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CardsSlider /> renders slider with cards 1`] = `
-<Slider>
+<Slider
+  defaultActive={0}
+>
   <Card
     definition="some definition"
     key="1"

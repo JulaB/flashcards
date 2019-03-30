@@ -3,6 +3,7 @@
 exports[`<Card /> renders component 1`] = `
 <FlipBox
   className="card"
+  focusable={true}
 >
   <div
     className="card__term"
