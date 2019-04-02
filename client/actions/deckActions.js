@@ -20,10 +20,17 @@ export const deckFetchDataFailure = (deckId, error) => ({
 
 export const deckFetchData = deckId => (
   (dispatch, getState) => {
-    const { cards } = getState().deckReducer || {};
+    const { cards = {} } = getState().deckReducer || {};
 
-    if (cards[deckId] || !parseInt(deckId, 10)) {
-      return null;
+    if (cards[deckId]) {
+      return Promise.resolve();
+    }
+    if (!parseInt(deckId, 10)) {
+      dispatch(deckFetchDataFailure(
+        deckId,
+        new Error('Invalid parameters'),
+      ));
+      return Promise.reject();
     }
     dispatch(deckIsFetching(deckId));
     return fetch(apiUrl(`/decks/${deckId}/cards`))

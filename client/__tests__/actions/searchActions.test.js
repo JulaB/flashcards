@@ -28,7 +28,7 @@ describe('searchActions', () => {
     });
     it('creates SEARCH_FETCH_DATA_SUCCESS for success fetching', () => {
       const mockJson = { data: [{ id: 1 }, { id: 2 }] };
-      fetchMock.getOnce('/api/v1/search', {
+      fetchMock.getOnce(apiUrl('/search'), {
         body: mockJson,
       });
       const expectedActions = [
