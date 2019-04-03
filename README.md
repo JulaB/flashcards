@@ -28,9 +28,13 @@ Work in progress.
 ## Development
 To run server in development with hot module replacement `overmind s -f Procfile.dev`
 
-## Running the tests
+## Running tests
 * rails test
 * yarn test
+
+## Running tests with coverage
+* COVERAGE=true rails test
+* yarn test --coverage
 
 ## Author
 [Julia Bazhukhina](https://github.com/JulaB)
