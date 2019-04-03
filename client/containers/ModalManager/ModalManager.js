@@ -1,20 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
+import Modal from 'components/Shared/Modal/Modal';
 import DeckModal from 'containers/Deck/DeckModal';
-import Button from 'components/Shared/Button/Button';
-import * as types from 'constants/modalConstants';
 
-import './modal.css';
+import * as types from 'constants/modalConstants';
 
 const MODAL_COMPONENTS = {
   [types.DECK_MODAL]: DeckModal,
 };
-
-if (process.env.NODE_ENV !== 'test') {
-  ReactModal.setAppElement('#root');
-}
 
 class ModalManagerContainer extends React.Component {
   constructor(props) {
@@ -43,28 +37,13 @@ class ModalManagerContainer extends React.Component {
     const Component = MODAL_COMPONENTS[modalType];
 
     return (
-      <div>
-        <ReactModal
-          isOpen={this.state.isOpen}
-          onRequestClose={this.closeModal}
-          className="modal"
-          overlayClassName="modal__overlay"
-          closeTimeoutMS={1000}
-          contentLabel={modalProps.title}
-        >
-          <header className="modal__header">
-            <h3 className="modal__title">{modalProps.title}</h3>
-            <Button
-              className="btn--control modal__close-btn"
-              onClick={this.closeModal}
-              aria-label="Close"
-            >
-              &times;
-            </Button>
-          </header>
-          <Component {...modalProps} />
-        </ReactModal>
-      </div>
+      <Modal
+        isOpen={this.state.isOpen}
+        title={modalProps.title}
+        onClose={this.closeModal}
+      >
+        <Component {...modalProps} />
+      </Modal>
     );
   }
 }
