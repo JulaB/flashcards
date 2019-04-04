@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeckQuickView /> renders the component with default props 1`] = `
+<Button
+  className="btn--primary deck__button"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Quick View
+</Button>
+`;
