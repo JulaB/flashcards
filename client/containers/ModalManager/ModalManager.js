@@ -10,7 +10,7 @@ const MODAL_COMPONENTS = {
   [types.DECK_MODAL]: DeckModal,
 };
 
-class ModalManagerContainer extends React.Component {
+export class ModalManagerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
