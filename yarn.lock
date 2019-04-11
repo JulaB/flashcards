@@ -2510,6 +2510,11 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.0.2, cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
+coverage-badges@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/coverage-badges/-/coverage-badges-1.0.0.tgz#b534d71ae9e5dca8e72255b2d5ee2e5620e12a86"
+  integrity sha512-GmJr6pgzsg7B9IaVtctopoEzqCBQSOMjWYlnQ4H+iDjnDSVClC/QPoi3xK91Jhufj0GJ+f4HKGyYo3pM4e5Bfg==
+
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"

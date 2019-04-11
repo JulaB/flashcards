@@ -1,0 +1,14 @@
+[
+  {
+    "label": "JS coverage",
+    "source": "./coverage/coverage-summary.json",
+    "attribute": "total.statements.pct",
+    "outputDir": "./badges"
+  },
+  {
+    "label": "Ruby coverage",
+    "source": "./coverage/.last_run.json",
+    "attribute": "result.covered_percent",
+    "outputDir": "./badges"
+  }
+]

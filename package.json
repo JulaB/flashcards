@@ -8,7 +8,10 @@
   },
   "scripts": {
     "lint-staged": "$(yarn bin)/lint-staged",
-    "test": "$(yarn bin)/jest"
+    "test": "$(yarn bin)/jest",
+    "premake-badges": "yarn run test --coverage && COVERAGE=true rails test",
+    "make-badges": "$(yarn bin)/coverage-badges",
+    "postmake-badges": "git add ./badges/js_coverage.svg ./badges/ruby_coverage.svg"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -17,6 +20,11 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/coverage/"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "json-summary"
     ],
     "moduleDirectories": [
       "node_modules",
@@ -55,7 +63,8 @@
     ]
   },
   "pre-commit": [
-    "lint-staged"
+    "lint-staged",
+    "make-badges"
   ],
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
@@ -75,6 +84,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.4.0",
+    "coverage-badges": "^1.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "enzyme-to-json": "^3.3.5",
