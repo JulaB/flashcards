@@ -1,6 +1,6 @@
 # FlashCards app &nbsp;&nbsp;&nbsp;&nbsp;[![Codeship Status for JulaB/flashcards](https://app.codeship.com/projects/fa7b7c50-276a-0137-85fa-4aa988ab8cae/status?branch=master)](https://app.codeship.com/projects/330594) ![JS Coverage](./badges/js_coverage.svg) ![Ruby Coverage](./badges/ruby_coverage.svg)
 
-This project is a simple flashcards application.
+This project is a simple [flashcards application](https://flashcards-jb.herokuapp.com/).
 
 ## Technologies
 * Ruby 2.6.0
