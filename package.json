@@ -68,7 +68,7 @@
   ],
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@rails/webpacker": "^4.0.2",
+    "@rails/webpacker": "^4.0.7",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "normalize.css": "^8.0.1",
     "postcss-custom-media": "^7.0.7",
@@ -84,7 +84,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.4.0",
-    "coverage-badges": "^1.0.0",
+    "coverage-badges": "^1.0.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
     "enzyme-to-json": "^3.3.5",
@@ -102,6 +102,6 @@
     "redux-mock-store": "^1.5.3",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.7.2"
   }
 }

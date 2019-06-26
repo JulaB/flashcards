@@ -8,7 +8,7 @@ describe('<CardsSlider />', () => {
   it('renders the component with default props', () => {
     const wrapper = mount(<CardsSlider />);
     expect(wrapper.exists()).toBeTruthy();
-    expect(wrapper.html()).toBeNull();
+    expect(wrapper.html()).toBe('');
   });
 
   it('renders slider with cards', () => {
