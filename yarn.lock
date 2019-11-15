@@ -2604,10 +2604,10 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.2.0, cosmiconfig@^5.2.1:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-coverage-badges@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/coverage-badges/-/coverage-badges-1.0.3.tgz#8d8f0f798cb7de469f31e948c70d411c8776e616"
-  integrity sha512-puT2Q/nMZD1CC7rD+5AcF+9wZaILqi+o4XF+dzedpo2gsPGsLzs9Xk61VTu9me0x+Dfy/Oms38xFC44LCpngGQ==
+coverage-badges@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/coverage-badges/-/coverage-badges-1.0.4.tgz#3d586f94a0056a840b04df5aff856cb66fd03ccc"
+  integrity sha512-tSqn5KIL3ikfkL/M/7B98O61LvE24fHt7Y5R4hlqD5exlUgbG3NMCzvv+SZJ2nlRTpn27UhIfDHOGyqeTX5DqA==
 
 create-ecdh@^4.0.0:
   version "4.0.3"
