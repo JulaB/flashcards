@@ -68,7 +68,7 @@
   ],
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@rails/webpacker": "^4.0.7",
+    "@rails/webpacker": "^4.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "normalize.css": "^8.0.1",
     "postcss-custom-media": "^7.0.7",
@@ -102,6 +102,6 @@
     "redux-mock-store": "^1.5.3",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.10.1"
   }
 }
