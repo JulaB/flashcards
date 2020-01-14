@@ -1,18 +1,11 @@
-:root {
+.dark-mode {
   --color-primary: #95aeb7;
   --color-primary-dark: #223853;
   --color-accent: #e8b744;
   --color-accent-dark: #b25b47;
-  --black: rgb(20, 32, 45);
+  --black: #fdfcfc;
   --grey-1: #999;
-  --white: #fdfcfc;
-
-  /* feedback */
-  --color-success: #62af6f;
-  --color-error: #f44336;
-  --color-warning: #df9f37;
-  --color-info: #223853;
-  --color-default: #95aeb7;
+  --white: rgb(20, 32, 45);
 
   /* typography */
   --color-text: var(--black);
@@ -36,27 +29,8 @@
   --color-body: var(--white);
   --color-border: var(--color-accent);
   --color-loader: var(--color-accent-dark);
-  --deck-bg: var(--white);
-  --modal-bg: var(--white);
+  --deck-bg: var(--color-primary-dark);
+  --modal-bg: var(--color-primary-dark);
   --card-border: var(--color-primary);
-  --card-border-hover: var(--color-primary-dark);
-}
-
-body {
-  color: var(--color-text);
-  background: var(--color-body);
-}
-
-h1,
-h2,
-h3 {
-  color: var(--color-text-heading);
-}
-
-a {
-  color: var(--color-link);
-
-  &:visited {
-    color: var(--color-link-visited);
-  }
+  --card-border-hover: var(--color-accent);
 }

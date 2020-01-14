@@ -1,5 +1,5 @@
 .modal {
-  background: var(--color-body);
+  background: var(--modal-bg);
   position: absolute;
   left: var(--space-sm);
   right: var(--space-sm);

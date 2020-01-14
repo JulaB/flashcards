@@ -21,4 +21,9 @@
     text-align: center;
     color: var(--color-accent-dark);
   }
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

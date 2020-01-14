@@ -1,5 +1,6 @@
 @import 'normalize.css/normalize.css';
 @import './_colors.css';
+@import './_dark.css';
 @import './_spacing.css';
 @import './_typography.css';
 

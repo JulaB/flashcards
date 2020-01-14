@@ -1,0 +1,11 @@
+.dark-mode-switcher {
+  .toggle-switch__container::after {
+    content: '☀';
+    background-color: transparent;
+  }
+
+  .toggle-switch__checkbox:checked + .toggle-switch__container::after {
+    content: '☽';
+    background-color: transparent;
+  }
+}
