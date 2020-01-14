@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.4.0",
+    "babel-jest": "^24.9.0",
     "coverage-badges": "^1.0.4",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
@@ -95,7 +95,7 @@
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-react": "^7.12.4",
     "fetch-mock": "^7.3.1",
-    "jest": "^24.4.0",
+    "jest": "^24.9.0",
     "lint-staged": "^9.2.0",
     "node-fetch": "^2.3.0",
     "pre-commit": "^1.2.2",
