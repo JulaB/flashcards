@@ -11,20 +11,20 @@ module Api
       it 'returns not found when deck is not found' do
         get api_v1_deck_cards_path(deck_id: 0)
 
-        response.must_be_not_found
+        _(response).must_be_not_found
       end
 
       it 'returns not found when deck is not public' do
         deck = decks(:closed_deck)
         get api_v1_deck_cards_path(deck)
 
-        response.must_be_not_found
+        _(response).must_be_not_found
       end
 
       it 'returns successful response that contains only the deck cards' do
         get path
 
-        response.must_be_successful
+        _(response).must_be_successful
         cards_id = deck.cards.pluck(:id)
         pattern = cards_id.map do |id|
           {
@@ -36,7 +36,7 @@ module Api
             }
           }
         end
-        response.body.must_match_json_expression(data: pattern)
+        _(response.body).must_match_json_expression(data: pattern)
       end
     end
   end

@@ -22,7 +22,7 @@ module Api
     private
 
     def assert_content_type(response)
-      assert_equal 'application/vnd.api+json', response.content_type
+      assert_equal 'application/vnd.api+json', response.media_type
     end
   end
 end
