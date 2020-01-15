@@ -8,7 +8,7 @@ module Api
       let(:path) { api_v1_search_index_path }
       it 'returns successful response' do
         get path
-        response.must_be_successful
+        _(response).must_be_successful
 
         pattern = {
           data: [
@@ -20,7 +20,7 @@ module Api
             }
           ].ignore_extra_values!
         }
-        response.body.must_match_json_expression(pattern)
+        _(response.body).must_match_json_expression(pattern)
       end
     end
   end
