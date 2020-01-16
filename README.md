@@ -3,7 +3,7 @@
 This project is a simple [flashcards application](https://flashcards-jb.herokuapp.com/).
 
 ## Technologies
-* Ruby 2.6.0
+* Ruby 2.6.5
 * Rails 6.0.2.1
 * Postgres 11.1
 * React 16.8.3
