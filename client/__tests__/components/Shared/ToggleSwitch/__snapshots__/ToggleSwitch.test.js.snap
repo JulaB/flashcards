@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleSwitch /> renders the component 1`] = `
+<label
+  className="toggle-switch "
+  htmlFor="toggleSwitch"
+>
+  <input
+    className="toggle-switch__checkbox"
+    id="toggleSwitch"
+    role="switch"
+    type="checkbox"
+  />
+  <span
+    area-hidden="true"
+    className="toggle-switch__container"
+  />
+</label>
+`;
