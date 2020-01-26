@@ -1,0 +1,25 @@
+.git
+.dockerignore
+.byebug_history
+node_modules/
+log/*
+tmp/*
+public/packs/*
+/public/packs-test/*
+!/log/.keep
+!/tmp/.keep
+.DS_Store
+/.bundle
+.cache
+
+
+/yarn-error.log
+
+coverage
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+.env
