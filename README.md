@@ -10,6 +10,7 @@ This project is a simple [flashcards application](https://flashcards-jb.herokuap
 * Redux 4.0.1
 * Webpack 4.41.2
 * Node 10.15.0
+* Yarn 1.21.1
 * PostCSS
 * Minitest
 * Jest
@@ -18,23 +19,37 @@ This project is a simple [flashcards application](https://flashcards-jb.herokuap
 ## Project Status
 Work in progress.
 
-## Install
-* yarn install
-* bundle install
-* rails db:setup
-* rails test
-* yarn test
+## Run on docker
+### Prepare your Docker containers:
+* `docker-compose build`
+* `docker-compose run --rm runner yarn install`
+* `docker-compose run --rm runner ./bin/setup`
 
-## Development
+### Run rails server
+* `docker-compose up rails webpacker`
+
+### Run tests
+* `docker-compose run --rm runner rails test`
+* `docker-compose run --rm runner yarn install && yarn test`
+
+## Run on local machine
+### Install
+* `yarn install`
+* `bundle install`
+* `rails db:setup`
+* `rails test`
+* `yarn test`
+
+### Development
 To run server in development with hot module replacement `overmind s -f Procfile.dev`
 
-## Running tests
-* rails test
-* yarn test
+### Running tests
+* `rails test`
+* `yarn test`
 
-## Running tests with coverage
-* COVERAGE=true rails test
-* yarn test --coverage
+### Running tests with coverage
+* `COVERAGE=true rails test`
+* `yarn test --coverage`
 
 ## Author
 [Julia Bazhukhina](https://github.com/JulaB)
