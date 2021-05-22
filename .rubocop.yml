@@ -1,5 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.6
+  NewCops: enable
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
@@ -8,6 +9,7 @@ AllCops:
     - 'docs/**/*'
     - 'tmp/**/*'
     - 'node_modules/**/*'
+    - 'config.ru'
 Metrics/LineLength:
   Max: 99
 Style/Documentation:
