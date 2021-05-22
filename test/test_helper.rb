@@ -7,7 +7,7 @@ require 'minitest/rails'
 require 'json_expressions/minitest'
 require 'mocha/minitest'
 
-Dir[Rails.root.join('test/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('test/support/**/*.rb')].sort.each { |f| require f }
 
 module ActiveSupport
   class TestCase
