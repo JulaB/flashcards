@@ -10,7 +10,6 @@ This project is a simple [flashcards application](https://flashcards-jb.herokuap
 * Redux 4.0.1
 * Webpack 4.41.2
 * Node 12.22.12
-* Yarn 1.21.1
 * PostCSS
 * Minitest
 * Jest
