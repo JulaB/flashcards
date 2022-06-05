@@ -2872,10 +2872,10 @@ cosmiconfig@^6.0.0:
     path-type "^4.0.0"
     yaml "^1.7.2"
 
-coverage-badges@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/coverage-badges/-/coverage-badges-1.0.4.tgz#3d586f94a0056a840b04df5aff856cb66fd03ccc"
-  integrity sha512-tSqn5KIL3ikfkL/M/7B98O61LvE24fHt7Y5R4hlqD5exlUgbG3NMCzvv+SZJ2nlRTpn27UhIfDHOGyqeTX5DqA==
+coverage-badges@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/coverage-badges/-/coverage-badges-1.0.7.tgz#ec5109f2c7c61fe9f7230685e4b40c868c2b12f2"
+  integrity sha512-slYFleOr+QreEVAAocjfN8oUmlCKQi/Zol08/IwVQooJU7C8LLqlz+KNf5hgz13TBHNB7fZdJAPKheTpVq8OzQ==
 
 create-ecdh@^4.0.0:
   version "4.0.3"

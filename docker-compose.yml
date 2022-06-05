@@ -6,11 +6,11 @@ services:
       dockerfile: ./.dockerdev/Dockerfile
       args:
         RUBY_VERSION: '2.6.5'
-        PG_MAJOR: '12'
+        PG_MAJOR: '14'
         NODE_MAJOR: '10'
         YARN_VERSION: '1.21.1'
         BUNDLER_VERSION: '1.17.2'
-    image: flashcards-dev:1.0.0
+    image: flashcards-dev:1.0.1
     tmpfs:
       - /tmp
 
