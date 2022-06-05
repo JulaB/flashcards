@@ -8,7 +8,7 @@
   {
     "label": "Ruby coverage",
     "source": "./coverage/.last_run.json",
-    "attribute": "result.covered_percent",
+    "attribute": "result.line",
     "outputDir": "./badges"
   }
 ]
