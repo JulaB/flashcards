@@ -13,7 +13,7 @@
   "scripts": {
     "lint-staged": "$(yarn bin)/lint-staged",
     "test": "$(yarn bin)/jest",
-    "premake-badges": "yarn run test --coverage && COVERAGE=true rails test",
+    "premake-badges": "yarn run test --coverage && COVERAGE=true bin/rails test",
     "make-badges": "$(yarn bin)/coverage-badges",
     "postmake-badges": "git add ./badges/js_coverage.svg ./badges/ruby_coverage.svg"
   },

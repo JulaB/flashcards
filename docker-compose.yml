@@ -9,7 +9,7 @@ services:
         PG_MAJOR: '14'
         NODE_MAJOR: '12'
         YARN_VERSION: '1.21.1'
-        BUNDLER_VERSION: '1.17.2'
+        BUNDLER_VERSION: '2.3.15'
     image: flashcards-dev:1.0.1
     tmpfs:
       - /tmp
