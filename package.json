@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/JulaB/flashcards.git"
   },
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "lint-staged": "$(yarn bin)/lint-staged",
     "test": "$(yarn bin)/jest",
@@ -67,7 +71,7 @@
     "make-badges"
   ],
   "dependencies": {
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-react": "^7.9.0",
     "@rails/webpacker": "^4.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "normalize.css": "^8.0.1",
@@ -83,7 +87,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.5.1",
     "coverage-badges": "^1.0.7",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
@@ -95,7 +99,7 @@
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-react": "^7.12.4",
     "fetch-mock": "^7.3.1",
-    "jest": "^24.9.0",
+    "jest": "^25.5.4",
     "lint-staged": "^9.2.0",
     "node-fetch": "^2.3.0",
     "pre-commit": "^1.2.2",

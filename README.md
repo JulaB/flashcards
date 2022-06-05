@@ -9,7 +9,7 @@ This project is a simple [flashcards application](https://flashcards-jb.herokuap
 * React 16.8.3
 * Redux 4.0.1
 * Webpack 4.41.2
-* Node 10.15.0
+* Node 12.22.12
 * Yarn 1.21.1
 * PostCSS
 * Minitest
