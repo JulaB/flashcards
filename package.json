@@ -52,20 +52,16 @@
   },
   "lint-staged": {
     "config/webpack/**/*.js": [
-      "eslint",
-      "git add"
+      "eslint"
     ],
     "client/**/*.js": [
-      "eslint",
-      "git add"
+      "eslint"
     ],
     "client/**/*.css": [
-      "stylelint --fix",
-      "git add"
+      "stylelint --fix"
     ],
     "{app,test}/**/*.rb": [
-      "bundle exec rubocop",
-      "git add"
+      "bundle exec rubocop"
     ]
   },
   "pre-commit": [
