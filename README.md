@@ -3,14 +3,13 @@
 This project is a simple [flashcards application](https://flashcards-jb.herokuapp.com/).
 
 ## Technologies
-* Ruby 2.6.5
-* Rails 6.1.3
-* Postgres 11.1
+* Ruby 3.1.2
+* Rails 7.0.3
+* Postgres 14.3
 * React 16.8.3
 * Redux 4.0.1
 * Webpack 4.41.2
-* Node 10.15.0
-* Yarn 1.21.1
+* Node 16.15.1
 * PostCSS
 * Minitest
 * Jest
@@ -26,10 +25,10 @@ Work in progress.
 * `docker-compose run --rm runner ./bin/setup`
 
 ### Run rails server
-* `docker-compose up rails webpacker`
+* `docker-compose up rails client`
 
 ### Run tests
-* `docker-compose run --rm runner rails test`
+* `docker-compose run --rm runner bin/rails db:prepare && rails test`
 * `docker-compose run --rm runner yarn install && yarn test`
 
 ## Run on local machine

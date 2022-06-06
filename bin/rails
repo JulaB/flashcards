@@ -1,20 +1,4 @@
 #!/usr/bin/env ruby
-
-if ENV['RAILS_ENV'] == 'test' && ENV['COVERAGE']
-  require 'simplecov'
-  SimpleCov.start 'rails' do
-    add_filter '/bin/'
-    add_filter do |file|
-      file.lines.count < 7
-    end
-  end
-end
-
-begin
-  load File.expand_path('../spring', __FILE__)
-rescue LoadError => e
-  raise unless e.message.include?('spring')
-end
-APP_PATH = File.expand_path('../config/application', __dir__)
-require_relative '../config/boot'
-require 'rails/commands'
+APP_PATH = File.expand_path("../config/application", __dir__)
+require_relative "../config/boot"
+require "rails/commands"
