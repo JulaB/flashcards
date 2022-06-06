@@ -4,7 +4,7 @@ This project is a simple [flashcards application](https://flashcards-jb.herokuap
 
 ## Technologies
 * Ruby 3.1.2
-* Rails 6.1.6
+* Rails 7.0.3
 * Postgres 14.3
 * React 16.8.3
 * Redux 4.0.1
